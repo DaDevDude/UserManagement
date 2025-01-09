@@ -1,8 +1,15 @@
 import axios, { AxiosError } from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
-import { UserType } from "../../../common/validation";
 import { useNavigate } from "react-router-dom";
+
+interface UserType {
+  empId: number;
+  name: string;
+  designation: string;
+  role: "Intern" | "PM" | "Founder";
+  password: string;
+}
 
 enum Role {
   Intern = "Intern",
