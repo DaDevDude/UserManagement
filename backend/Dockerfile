@@ -1,10 +1,12 @@
-FROM node:20.18-alpine3.21
+FROM node:20-alpine 
 
 WORKDIR /backend
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install
+
+COPY . .
 
 EXPOSE 8080
 
