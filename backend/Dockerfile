@@ -4,10 +4,10 @@ WORKDIR /backend
 
 COPY backend/package*.json .
 
-RUN ls -la
 RUN npm install
 
 COPY /backend .
+RUN ls -la
 
 EXPOSE 8080
 
