@@ -7,8 +7,8 @@ COPY backend/package*.json .
 RUN ls -la
 RUN npm install
 
-COPY . .
+COPY /backend .
 
 EXPOSE 8080
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "/backend/index.js" ]
