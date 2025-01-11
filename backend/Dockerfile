@@ -4,6 +4,7 @@ WORKDIR /backend
 
 COPY package*.json ./
 
+RUN ls
 RUN npm install
 
 COPY . .
