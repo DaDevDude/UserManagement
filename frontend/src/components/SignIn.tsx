@@ -10,7 +10,7 @@ export default function SignIn() {
   async function handleFormSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/user/login", {
+      const response = await axios.post("http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/login", {
         empId,
         password,
       });

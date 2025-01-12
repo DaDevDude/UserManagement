@@ -35,9 +35,12 @@ export default function Home() {
     }
 
     axios
-      .get("http://localhost:8080/user/all", {
-        headers: { Authorization: localStorage.getItem("token") },
-      })
+      .get(
+        "http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/all",
+        {
+          headers: { Authorization: localStorage.getItem("token") },
+        }
+      )
       .then((response) => {
         setUsers(response.data.users);
       })
@@ -50,7 +53,9 @@ export default function Home() {
 
   async function handleDeleteUser(empId: number) {
     try {
-      await axios.delete(`http://localhost:8080/user/${empId}`);
+      await axios.delete(
+        `http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/${empId}`
+      );
     } catch (e) {
       if (e instanceof AxiosError) {
         console.log("Unable to delete User");
