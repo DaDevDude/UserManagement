@@ -36,7 +36,7 @@ export default function Home() {
 
     axios
       .get(
-        "http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/all",
+        "ec2-13-235-80-244.ap-south-1.compute.amazonaws.com:8080/user/all",
         {
           headers: { Authorization: localStorage.getItem("token") },
         }
@@ -54,7 +54,7 @@ export default function Home() {
   async function handleDeleteUser(empId: number) {
     try {
       await axios.delete(
-        `http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/${empId}`
+        `http://ec2-43-204-221-94.ap-south-1.compute.amazonaws.com:8080/user/${empId}`
       );
     } catch (e) {
       if (e instanceof AxiosError) {

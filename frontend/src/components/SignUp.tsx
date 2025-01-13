@@ -14,7 +14,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://ec2-13-203-154-142.ap-south-1.compute.amazonaws.com:8080/user/new",
+        "http://ec2-43-204-221-94.ap-south-1.compute.amazonaws.com:8080/user/new",
         {
           empId,
           name,
